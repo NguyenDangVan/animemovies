@@ -1,44 +1,79 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top navigator"> <!-- sticky-top: dính chặt lên đỉnh trang -->
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-md sticky-top navigator" style="background: #000"> <!-- sticky-top: dính chặt lên đỉnh trang -->
+  <%= link_to "Enlish", locale:"en" %>
+  <%= link_to "VietNam", locale:"vi" %>
+  <div class="container-fluid navbar-1">
     <a href="#" class="narbar-brand">
       <!-- <img src="/static/images/logo.png" height="50px"> -->
       <%= image_tag("logo.png", height: "50px") %>
     </a>
+
+    <div class="input-group col-md-4">
+      <input class="form-control py-2 border-right-0 border" type="search" value="search" id="example-search-input">
+      <span class="input-group-append">
+        <button class="btn btn-outline-secondary border-left-0 border" type="button">
+              <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a href="#" class="nav-link active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Page</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Connect</a>
+          <a href="#" class="nav-link active"><%= t ".login" %></a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-  <div class="container-fluid ">
+<nav class="navbar navbar-expand-md" style="background: #000">
+  <div class="container-fluid">
     <div class="collapse navbar-collapse " id="navbarResponsive ">
       <ul class="navbar-nav ml-auto navigator2">
         <li class="nav-item">
-          <a href="#" class="nav-link active">Home</a>
+          <a href="#" class="nav-link active">Trang chu</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Nam phat hanh</a>
+          <!-- <a href="#" class="nav-link">Nam phat hanh</a> -->
+          <div class="dropdown">
+            <a href="#" class="nav-link dropdown-btn">Nam phat hanh</a>
+            <div class="dropdown-content">
+              <a href="#">1999</a>
+              <a href="#">2000</a>
+              <a href="#">2001</a>
+              <a href="#">2002</a>
+            </div>
+          </div>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">The loai</a>
+          <div class="dropdown">
+            <a href="#" class="nav-link dropdown-btn">The loai</a>
+            <div class="dropdown-content2">
+              <a href="#">Action</a>
+              <a href="#">Adventure</a>
+              <a href="#">Adult</a>
+              <a href="#">Anthropomophism</a>
+              <a href="#">Bounty Hunters</a>
+              <a href="#">Clubs</a>
+              <a href="#">Comedy</a>
+              <a href="#">Drama</a>
+              <a href="#">Ecchi</a>
+              <a href="#">Fantasy</a>
+              <a href="#">Game</a>
+              <a href="#">Harem</a>
+              <a href="#">Historical</a>
+              <a href="#">Horror</a>
+              <a href="#">Josei</a>
+              <a href="#">Magic</a>
+              <a href="#">Martial Arts</a>
+              <a href="#">Mecha</a>
+              <a href="#">Music</a>
+              <a href="#">Parody</a>
+            </div>
+          </div>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Danh sach Anime</a>
@@ -52,7 +87,7 @@
 
   <!-- Carousel -->
   <div id="slides" class="carousel slide" data-ride="carousel">
-    <div class="col-12 text-center">
+    <div class="col-12 text-center carousel-tittle">
       <h5>
         <a>Anime sắp chiếu 2019</a>
       </h5>
@@ -64,31 +99,30 @@
       <li data-target="#slides" data-slide-to="3"></li>
       <li data-target="#slides" data-slide-to="4"></li>
     </ul> -->
-    <div class="carousel-inner">
+    <div class="carousel-inner" >
       <div class="carousel-item active">
-        <%= image_tag("slide1.jpg") %>
+        <div class="row">
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+        </div>
       </div>
       <div class="carousel-item">
-        <%= image_tag("slide2.jpg") %>
+        <div class="row">
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+        </div>
       </div>
       <div class="carousel-item">
-        <%= image_tag("slide1.jpg") %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("slide2.jpg") %>
-      </div>
-     <div class="carousel-item">
-        <%= image_tag("slide1.jpg") %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("slide2.jpg") %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("slide1.jpg") %>
-      </div>
-      <div class="carousel-item">
-        <%= image_tag("slide2.jpg") %>
-      </div>
+        <div class="row">
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+        </div>
       </div>
     </div>
   </div>
@@ -230,7 +264,7 @@
                   <%= image_tag("slide1.jpg", class: "img-fluid") %>
                 </div>
                 <div class="col-md-8 left-movies">
-                  <span>Kimetsu no Yaiba</span>
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title %>
                   <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
                 </div>
                 </div>
@@ -241,7 +275,7 @@
                   <%= image_tag("slide1.jpg", class: "img-fluid") %>
                 </div>
                 <div class="col-md-8 left-movies">
-                  <span>Kimetsu no Yaiba</span>
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
                   <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
                 </div>
                 </div>
@@ -252,7 +286,7 @@
                   <%= image_tag("slide1.jpg", class: "img-fluid") %>
                 </div>
                 <div class="col-md-8 left-movies">
-                  <span>Kimetsu no Yaiba</span>
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
                   <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
                 </div>
                 </div>
@@ -263,7 +297,7 @@
                   <%= image_tag("slide1.jpg", class: "img-fluid") %>
                 </div>
                 <div class="col-md-8 left-movies">
-                  <span>Kimetsu no Yaiba</span>
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
                   <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
                 </div>
                 </div>
@@ -274,7 +308,7 @@
                   <%= image_tag("slide1.jpg", class: "img-fluid") %>
                 </div>
                 <div class="col-md-8 left-movies">
-                  <span>Kimetsu no Yaiba</span>
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
                   <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
                 </div>
                 </div>

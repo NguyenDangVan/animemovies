@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_042813) do
+ActiveRecord::Schema.define(version: 2019_06_19_145456) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -30,13 +30,20 @@ ActiveRecord::Schema.define(version: 2019_06_09_042813) do
     t.index ["status"], name: "index_episodes_on_status"
   end
 
-  create_table "movie_typles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "movie_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.integer "status_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "movie_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "movie_id", null: false
     t.bigint "category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_movie_typles_on_category_id"
-    t.index ["movie_id"], name: "index_movie_typles_on_movie_id"
+    t.index ["category_id"], name: "index_movie_types_on_category_id"
+    t.index ["movie_id"], name: "index_movie_types_on_movie_id"
   end
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,6 +59,15 @@ ActiveRecord::Schema.define(version: 2019_06_09_042813) do
     t.index ["title"], name: "index_movies_on_title"
   end
 
+  create_table "sub_movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "movie_id"
+    t.integer "status_movie"
+    t.integer "type_movie"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_sub_movies_on_movie_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "username"
     t.string "email"
@@ -62,6 +78,7 @@ ActiveRecord::Schema.define(version: 2019_06_09_042813) do
   end
 
   add_foreign_key "episodes", "movies"
-  add_foreign_key "movie_typles", "categories"
-  add_foreign_key "movie_typles", "movies"
+  add_foreign_key "movie_types", "categories"
+  add_foreign_key "movie_types", "movies"
+  add_foreign_key "sub_movies", "movies"
 end
