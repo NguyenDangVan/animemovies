@@ -1,0 +1,350 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md sticky-top navigator" style="background: #000"> <!-- sticky-top: dính chặt lên đỉnh trang -->
+  <%= link_to "Enlish", locale:"en" %>
+  <%= link_to "VietNam", locale:"vi" %>
+  <div class="container-fluid navbar-1">
+    <a href="#" class="narbar-brand">
+      <!-- <img src="/static/images/logo.png" height="50px"> -->
+      <%= image_tag("logo.png", height: "50px") %>
+    </a>
+
+    <div class="input-group col-md-4">
+      <input class="form-control py-2 border-right-0 border" type="search" value="search" id="example-search-input">
+      <span class="input-group-append">
+        <button class="btn btn-outline-secondary border-left-0 border" type="button">
+              <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link active"><%= t ".login" %></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md" style="background: #000">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse " id="navbarResponsive ">
+      <ul class="navbar-nav ml-auto navigator2">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Trang chu</a>
+        </li>
+        <li class="nav-item">
+          <!-- <a href="#" class="nav-link">Nam phat hanh</a> -->
+          <div class="dropdown">
+            <a href="#" class="nav-link dropdown-btn">Nam phat hanh</a>
+            <div class="dropdown-content">
+              <a href="#">1999</a>
+              <a href="#">2000</a>
+              <a href="#">2001</a>
+              <a href="#">2002</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="dropdown">
+            <a href="#" class="nav-link dropdown-btn">The loai</a>
+            <div class="dropdown-content2">
+              <a href="#">Action</a>
+              <a href="#">Adventure</a>
+              <a href="#">Adult</a>
+              <a href="#">Anthropomophism</a>
+              <a href="#">Bounty Hunters</a>
+              <a href="#">Clubs</a>
+              <a href="#">Comedy</a>
+              <a href="#">Drama</a>
+              <a href="#">Ecchi</a>
+              <a href="#">Fantasy</a>
+              <a href="#">Game</a>
+              <a href="#">Harem</a>
+              <a href="#">Historical</a>
+              <a href="#">Horror</a>
+              <a href="#">Josei</a>
+              <a href="#">Magic</a>
+              <a href="#">Martial Arts</a>
+              <a href="#">Mecha</a>
+              <a href="#">Music</a>
+              <a href="#">Parody</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Danh sach Anime</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="main">
+
+  <!-- Carousel -->
+  <div id="slides" class="carousel slide" data-ride="carousel">
+    <div class="col-12 text-center carousel-tittle">
+      <h5>
+        <a>Anime sắp chiếu 2019</a>
+      </h5>
+    </div>
+    <!-- <ul class="carousel">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+      <li data-target="#slides" data-slide-to="3"></li>
+      <li data-target="#slides" data-slide-to="4"></li>
+    </ul> -->
+    <div class="carousel-inner" >
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide2.jpg", class: "img-fluid") %></div>
+          <div class="col-md-3"><%= image_tag("slide1.jpg", class: "img-fluid") %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <hr style="color: white"> -->
+
+  <div class="container-fluid" style="border-top: 1px solid #171717">
+    <div class="row">
+      <div class="left-movies col-md-8">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+            <a href="#">Anime mua mới</a>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <a href="#">Anime mua truoc</a>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <a href="#">Anime cap nhat</a>
+            </div>
+          </div>
+        </div>
+        <hr style="color: white">
+        <div class="tab-home-1">
+          <h2>
+            <span class="title-list">Anime mua moi</span>
+            <a href="#" class="readmore">xem them >></a>
+          </h2>
+
+          <div class="list-movies">
+            <div class="row">
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+             <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+              <div class="movies-item col-md-3">
+                <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-home-2">
+          <h2>
+            <span class="title-list">Anime dai tap</span>
+            <a href="#" class="readmore">xem them >></a>
+          </h2>
+          <div class="row">
+            <div class="movies-item col-md-3">
+              <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+            </div>
+            <div class="movies-item col-md-3">
+              <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+            </div>
+            <div class="movies-item col-md-3">
+              <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+            </div>
+            <div class="movies-item col-md-3">
+              <%= image_tag("solo_leveling.jpg", class: "img-fluid") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right menu -->
+      <div class="right-movies col-md-4">
+        <div class="row">
+          <div class="title-ad" style="color: red"><p>Anime xem nhieu trong ngay</p></div>
+          <hr>
+          <div class="categories">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="row">
+                <div class="col-md-4 left-movies">
+                  <%= image_tag("slide1.jpg", class: "img-fluid") %>
+                </div>
+                <div class="col-md-8 left-movies">
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title %>
+                  <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
+                </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                <div class="col-md-4 left-movies">
+                  <%= image_tag("slide1.jpg", class: "img-fluid") %>
+                </div>
+                <div class="col-md-8 left-movies">
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
+                  <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
+                </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                <div class="col-md-4 left-movies">
+                  <%= image_tag("slide1.jpg", class: "img-fluid") %>
+                </div>
+                <div class="col-md-8 left-movies">
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
+                  <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
+                </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                <div class="col-md-4 left-movies">
+                  <%= image_tag("slide1.jpg", class: "img-fluid") %>
+                </div>
+                <div class="col-md-8 left-movies">
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
+                  <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
+                </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row">
+                <div class="col-md-4 left-movies">
+                  <%= image_tag("slide1.jpg", class: "img-fluid") %>
+                </div>
+                <div class="col-md-8 left-movies">
+                  <%= link_to "Kimetsu no Yaiba", "#" , class: :title%>
+                  <span>Blade of Demon Destruction | Demon Slayer: Kimetsu no Yaiba | Sát Thủ Quỷ | Thanh gươm diệt quỷ| Quỷ diệt chi đao | 鬼滅の刃</span>
+                </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-header"></div>
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-md-6">
+        <h3>Gioi thieu</h3>
+        <span>
+          Trang Anime Vietsub Online chất lượng cao, tất cả các bộ anime trên trang được tổng hợp từ Internet và re-up từ các Fansub
+        </span>
+        <br>
+        <span>
+          Xem tốt nhất với màn hình độ phân giải 1280x720px trở lên và sử dụng trình duyệt Mozilla Firefox, Chrome & Cốc Cốc
+        </span>
+      </div>
+      <div class="col-md-6">
+        <h3>Lien he</h3>
+        <p>fb.com/dinvvan</p>
+        <p>email lien he: dinvvan@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom"></div>
+  <p class="text-center">localhost::3000 - Copuright &copy; 2019 - All Rights Reserved</p>
+</footer>
